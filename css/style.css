@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+.section-p{
+    padding: 2rem 8rem;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+/* HEADER */
+#header{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../asses/images/Banner-7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+.nav-logo h1{
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+}
+.nav-logo h1 span{
+    color: #F94C10;
+}
+.nav-items ul{
+    list-style: none;
+}
+.nav-items ul li {
+   display:inline-flex;
+   margin-right: 2rem;
+
+}
+.nav-items ul li a{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: 500;
+}
+.nav-items ul li a:hover{
+    color: #F94C10;
+}
+.sign-up{
+    background: #F94C10;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    transition: 0.3s ease;
+}
+.sign-up:hover{
+    color: #c2bbbb !important;
+    background-color: #ac330b;
+
+}
