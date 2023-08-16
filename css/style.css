@@ -177,15 +177,17 @@ a{
     height: 100vh;
     width: 100%;
     position: relative;
+    padding: 2rem 8rem;
 }
 .project .row{
-    width: 88%;
+    height: 100%;
     margin: auto;
     display: flex;
 }
 .project .col{
     width: 50%;
-    margin-top: 10rem;
+    height: 100%;
+    padding-top: 5rem;
 }
 .project .col h3{
     font-size: 3rem;
@@ -198,28 +200,27 @@ a{
     line-height: 2.5rem;
     margin-bottom: 2.5rem;
 }
-.col-2{
+.project .col.col-2{
     position: relative;
 } 
-.col-2 .box-1{
+.project .col.col-2 .box-1{
     position: absolute;
     width: 30rem;
     height: 20rem;
     background-color: var(--first-color);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    top: 0;
-    right: 10rem;
-
+    top: 10rem;
+    right: 5rem;
 } 
-.col-2 .box-2{
+.project .col.col-2 .box-2{
     position: absolute;
     width: 100%;
     height: 25rem;
     background-color:#FFDDCC;
-    left: 0px;
-    top: 110%;
+    left: 0rem;
+    bottom:0rem;
 } 
-.col-2 .image-box{
+.project .col.col-2 .image-box{
     position: absolute;
     width: 30rem;
     height: 40rem;
@@ -227,9 +228,12 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    top: 7rem;
+    top: 17rem;
     left: 10rem;
 }
+
+
+/* ----TOP MOVE----- */
 .top{
     position: fixed;
     right: 1.5rem;
@@ -249,6 +253,7 @@ a{
 }
 
 
+/* -------TREND-------- */
 #trend{
     background-color: var(--first-color);
     height: 100vh;
@@ -277,5 +282,431 @@ a{
 }
 #trend img{
     width: 50rem;
+    transition: 0.2s;
+}
+#trend img:hover{
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+
+/* feature */
+.feature{
+    width: 100%;
+    height: 100vh;
+    background-color: #F1F1F1;
+}
+.feature .row{
+    padding-top: 5rem;
+}
+.feature .row h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #0f0e0e;
+    margin-bottom: 2rem;
+}
+.feature .row p{
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: #0f0e0e;
+}
+.feature .row .boxs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20rem 20rem;
+    gap: 2rem;
+}
+.feature .boxs img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: 0.3s ease-out;
+}
+.feature .boxs img:hover{
+    transform: scale(1.1 , 1.1);
+}
+
+
+/* ----CONTACT---- */
+
+.contact{
+    height: 100vh;
+    width: 100%;
+    padding: 4rem 8rem;
+}
+.contact .row{
+    display: flex;
+}
+.contact .row .col{
+    width: 50%;
+    height: 100%;
+}
+.contact .row .col img{
+    width: 100%;
+    height: 60rem;
+    object-fit: cover;
+}
+.row .col-form{
+    padding-left: 5rem;
+}
+.row .col-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--first-color);
+    font-weight: 800;
+}
+.row .col-form p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #5a5959;
+    margin: 1rem 0;
+}
+.row .col-form .form-box{
+    display: flex;
+    flex-direction: column;
+}
+.form-box label{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--first-color);
+    padding: 1rem 0;
+}
+.form-box input{
+    height: 4rem;
+    padding: 1rem;
+    border: 1px solid #777171;
+    border-radius: 0.5rem;
+    outline: none;
+}
+.form-box input:focus{
+    border: 2px solid var(--first-color);
+}
+.form-box textarea{
+    height: 15rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    resize: none;
+    outline: none;
+}
+.form-box textarea:focus{
+    border: 2px solid var(--first-color);
+}
+.form-box button{
+    align-self: flex-start;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: var(--first-color);
+    border: none;
+    color: var(--second-color);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.form-box button:hover{
+    background-color: #cc3f10;
+}
+.contact .end{
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 1.7rem;
+    font-weight: 500;
+}
+.contact .end span{
+    color: var(--first-color);
+    font-weight: 700;
+}
+
+
+
+/* ----media qurie----- */
+@media  (max-width:1200px){
+    .project .row{
+        height: 100%;
+        width: 100%;
+    }
+    .project .col.col-2.box-1 {
+        right: 1rem;
+    }
+    #trend img {
+        width: 45rem;
+    }
+    .form-box label {
+        padding: 0.5rem 0;
+    }
+}
+@media  (max-width:992px){
+    .section-p {
+        padding: 2rem 5rem;
+    }
+    #header .sercive-box{
+        width: 70rem;
+    }
+    .project .col.col-2 .box-1 {
+        width: 25rem;
+        height: 15rem;
+    }
+    .project .col.col-2 .box-2 {
+        width: 100%;
+        height: 20rem;
+    }
+    .project .col.col-2 .image-box {
+        width: 25rem;
+        height: 40rem;
+        top: 17rem;
+        left: 4rem;
+    }
+    .form-box textarea {
+        height: 13rem;
+    }
+}
+@media (max-width:768px){
+    #header{
+        position: relative;
+    }
+    .menubar {
+        position: absolute;
+        top: .5rem;
+        right: 0rem;
+        display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .nav-items ul li {
+        display:flex;
+        flex-direction:column ;
+        padding: 0rem;
+        display: none;
+     }
+     .nav-items ul li a{
+         margin: 1rem 0;
+     }
+     #header .main h1 {
+        font-size: 3.5rem;
+    }
+    #header .sercive-box{
+        width: 55rem;
+    }
+    .service {
+        padding: 2rem 2rem;
+    }
+    .service h3 {
+        font-size: 1.3em;
+        margin-bottom: 0.5rem;
+    }
+    .service p {
+        font-size: 1.2rem;
+    }
+    .project {
+        padding: 2rem 5rem;
+    }
+    .project .row{
+        width: 100%;
+        flex-direction: column;
+    }
+    .project .col{
+        width: 100%;
+        height: 100%;
+        padding-top: 2rem;
+    }
+    .project .col h3 {
+        font-size: 2.5rem;
+    }
+    .project .col.col-2 .box-1{
+        width: 20rem;
+        height: 13rem;
+        top: 0rem;
+        right: 10rem;
+    } 
+    .project .col.col-2 .box-2{
+        width: 100%;
+        height: 15rem;
+    } 
+    .project .col.col-2 .image-box {
+        width: 20rem;
+        height: 30rem;
+        top: 2rem;
+        left: 20rem;
+    }
+    #trend{
+        width: 100%;
+        height: 100%;
+    }
+    #trend .row {
+        padding-top: 3rem;
+    }
+    #trend h1 {
+        font-size: 2.7rem;
+        margin-bottom: 3rem;
+        width: 40rem;
+    }
+    #trend p {
+        font-size: 1.3rem;
+        text-align: center;
+        line-height: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    .feature .row {
+        padding-top: 3rem;
+    }
+    .feature .row h1 {
+        font-size: 2.3rem;
+        width: 30rem;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    .feature .row p {
+        font-size: 1.4rem;
+        margin-bottom: 3rem;
+        color: #0f0e0e;
+        text-align: center;
+    }
+    .feature {
+        width: 100%;
+        height: 100%;
+        background-color: #F1F1F1;
+    }
+    .feature .row .boxs {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15rem 15rem 15rem 15rem;
+    }
+    .contact .row{
+        flex-direction: column;
+    }
+    .contact .row .col{
+        width: 100%;
+        height: 50%;
+    }
+    .contact .row .col img {
+        height: 100%;
+    }
+    .row .col-form {
+        padding-left: 0rem;
+    }
+    .contact {
+        height: 100vh;
+        width: 100%;
+        padding: 4rem 5rem;
+    }
+    .row .col-form h3 {
+    margin-top: 1rem;
+    }
+    .form-box label {
+        padding: 1rem 0;
+    }
+    #trend img {
+        width: 40rem;
+    }
+}
+@media (max-width:576px){
+    .section-p {
+        padding: 2rem 2rem;
+    }
+    #header .main{
+        top: 12rem;
+     }
+    #header .main h1 {
+        font-size: 3rem;
+    }
+    .main p {
+        width: 28rem;
+        font-size: 1.4rem;
+        margin: 1rem 0 2rem 0;
+    }
+    .see-all {
+        font-size: 1.3rem;
+        font-size: 500 !important;
+    }
+    #header .sercive-box{
+        width: 28rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem 10rem 10rem;
+    }
+    .service {
+        padding: 1rem 3rem;
+    }
+    .service h3 {
+        font-size: 1.3em;
+        margin-bottom: 0.5rem;
+    }
+    .service p {
+        font-size: 1rem;
+    }
+    .project .col h3 {
+        font-size: 2rem;
+    }
+    .project {
+        padding: 2rem 2rem;
+    }
+    .col p {
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+        margin-bottom: 2rem;
+    }
+    .project .col.col-2 .box-1 {
+        width: 15rem;
+        height: 8rem;
+        top: 3rem;
+        right: 8rem;
+    }
+    .project .col.col-2 .box-2 {
+        width: 100%;
+        height: 14rem;
+    }
+    .project .col.col-2 .image-box {
+        width: 15rem;
+        height: 20rem;
+        top: 5rem;
+        left: 8rem;
+    }
+    #trend{
+        width: 100%;
+        height: 100%;
+    }
+    #trend h1 {
+        font-size: 2.4rem;
+        width: 29rem;
+    }
+    #trend p {
+        font-size: 1.3rem;
+        text-align: center;
+        line-height: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    #trend img {
+        width: 28rem;
+    }
+    .feature{
+        width: 100%;
+    }
+    .feature .row h1 {
+        font-size: 2rem;
+        width: 28rem;
+    }
+    .feature .row .boxs {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10rem 10rem 10rem 10rem;
+    }
+    .contact {
+        padding: 2rem 2rem;
+    }
+    .row .col-form h3 {
+        font-size: 2rem;
+    }
+    .row .col-form p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #5a5959;
+        margin: 1rem 0 0 0;
+    }
+    .form-box button {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .top a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
