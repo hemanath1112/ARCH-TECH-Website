@@ -1,4 +1,4 @@
-
+// TOP MOVE
 const mov = document.querySelector('.top');
 
 window.addEventListener('scroll', () => {
@@ -8,4 +8,14 @@ window.addEventListener('scroll', () => {
     } else {
         mov.classList.remove('hema');
     }
+});
+
+
+// MENUBAR
+
+const nevitem=document.querySelector('.nav-items');
+const menubar=document.querySelector('.menubar');
+
+menubar.addEventListener('click',()=>{
+    nevitem.classList.toggle('active');
 });

@@ -32,14 +32,16 @@ a{
     background-size: cover;
     background-position: center;
     position: relative;
+    padding: 2rem 8rem;
+
 }
-.navbar{
+#header .navbar{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    position: sticky;
-    top: 0px;
+    z-index: 1;
+   
 }
 .nav-logo h1{
     font-size: 2rem;
@@ -51,21 +53,22 @@ a{
     color:var(--first-color);
     font-weight: 700 !important;
 }
-.nav-items ul{
-    list-style: none;
-}
-.nav-items ul li {
-   display:inline-flex;
-   padding-left: 3rem;
+#header .nav-items ul{
+    display: flex;
 
 }
-.nav-items ul li a{
+#header .nav-items ul li {
+   padding-left: 3rem;
+   list-style: none;
+
+}
+#header .nav-items ul li a{
     color: var( --second-color);
     font-size: 1.5rem;
     cursor: pointer;
     font-weight: 450;
 }
-.nav-items ul li a:hover{
+#header .nav-items ul li a:hover{
     color: var(--first-color);
     transition: 0.2s ease;
 }
@@ -98,11 +101,14 @@ a{
     height: .4rem;
     border-radius: 10rem;
     cursor: pointer; 
+  
+
 }
 
 
 /* HOME*/
 #header .main{
+   
    position: absolute;
    top: 15rem;
 }
@@ -200,36 +206,12 @@ a{
     line-height: 2.5rem;
     margin-bottom: 2.5rem;
 }
-.project .col.col-2{
+ .project .col.col-2{
     position: relative;
 } 
-.project .col.col-2 .box-1{
-    position: absolute;
-    width: 30rem;
-    height: 20rem;
-    background-color: var(--first-color);
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    top: 10rem;
-    right: 5rem;
-} 
-.project .col.col-2 .box-2{
-    position: absolute;
-    width: 100%;
-    height: 25rem;
-    background-color:#FFDDCC;
-    left: 0rem;
-    bottom:0rem;
-} 
-.project .col.col-2 .image-box{
-    position: absolute;
-    width: 30rem;
-    height: 40rem;
-    background-image: url(../asses/images/Building-3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    top: 17rem;
-    left: 10rem;
+.project .col.col-2 .image-box img{
+    width: 50rem;
+    height: 60rem;
 }
 
 
@@ -425,8 +407,12 @@ a{
         height: 100%;
         width: 100%;
     }
-    .project .col.col-2.box-1 {
-        right: 1rem;
+    .project .col.col-2 .image-box {
+        text-align: center;
+    }
+    .project .col.col-2 .image-box img {
+        width: 45rem;
+        height: 53rem;
     }
     #trend img {
         width: 45rem;
@@ -436,25 +422,21 @@ a{
     }
 }
 @media  (max-width:992px){
+    #header{
+        padding: 2rem 5rem;
+    }
     .section-p {
         padding: 2rem 5rem;
     }
     #header .sercive-box{
         width: 70rem;
     }
-    .project .col.col-2 .box-1 {
-        width: 25rem;
-        height: 15rem;
+    .project {
+        padding: 2rem 5rem;
     }
-    .project .col.col-2 .box-2 {
-        width: 100%;
-        height: 20rem;
-    }
-    .project .col.col-2 .image-box {
-        width: 25rem;
-        height: 40rem;
-        top: 17rem;
-        left: 4rem;
+    .project .col.col-2 .image-box img {
+        width: 35rem;
+        height: 55rem;
     }
     .form-box textarea {
         height: 13rem;
@@ -462,26 +444,47 @@ a{
 }
 @media (max-width:768px){
     #header{
+        width: 100%;
+        padding: 2rem 0rem;
         position: relative;
     }
     .menubar {
         position: absolute;
-        top: .5rem;
-        right: 0rem;
+        top: 2.5rem;
+        right: 3rem;
         display: flex;
     }
     .navbar{
         flex-direction: column;
+        padding: 0rem 3rem;
     }
-    .nav-items ul li {
-        display:flex;
-        flex-direction:column ;
-        padding: 0rem;
+    #header .nav-items{
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        z-index: 1;
         display: none;
+    }
+    #header .active{
+        display: flex;
+    }
+     .nav-items ul {
+        flex-direction:column ;
+        width: 100%;
+
      }
-     .nav-items ul li a{
-         margin: 1rem 0;
+     .nav-items ul li {
+        padding: 1rem 0; 
      }
+     .nav-items ul li:hover{
+        background: rgba(119, 118, 118, 0.6);
+     }
+    #header .main{
+        padding: 0rem 3rem;
+    }
      #header .main h1 {
         font-size: 3.5rem;
     }
@@ -513,21 +516,9 @@ a{
     .project .col h3 {
         font-size: 2.5rem;
     }
-    .project .col.col-2 .box-1{
-        width: 20rem;
-        height: 13rem;
-        top: 0rem;
-        right: 10rem;
-    } 
-    .project .col.col-2 .box-2{
-        width: 100%;
-        height: 15rem;
-    } 
-    .project .col.col-2 .image-box {
-        width: 20rem;
-        height: 30rem;
-        top: 2rem;
-        left: 20rem;
+    .project .col.col-2 .image-box img {
+        width: 35rem;
+        height: 40rem;
     }
     #trend{
         width: 100%;
@@ -636,6 +627,8 @@ a{
     }
     .project .col h3 {
         font-size: 2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0;
     }
     .project {
         padding: 2rem 2rem;
@@ -645,21 +638,9 @@ a{
         line-height: 2.3rem;
         margin-bottom: 2rem;
     }
-    .project .col.col-2 .box-1 {
-        width: 15rem;
-        height: 8rem;
-        top: 3rem;
-        right: 8rem;
-    }
-    .project .col.col-2 .box-2 {
-        width: 100%;
-        height: 14rem;
-    }
-    .project .col.col-2 .image-box {
-        width: 15rem;
-        height: 20rem;
-        top: 5rem;
-        left: 8rem;
+    .project .col.col-2 .image-box img {
+        width: 30rem;
+        height: 35rem;
     }
     #trend{
         width: 100%;
